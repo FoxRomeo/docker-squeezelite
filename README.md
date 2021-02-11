@@ -4,9 +4,10 @@ main goal is to use (and tested) on architecture arm32v6 (old RPi) and arm32v7 (
 
 
 ## based on squeezelite
-https://github.com/ralph-irving/squeezelite
-and alpine:3.12
+* https://github.com/ralph-irving/squeezelite
+* alpine:3.12
 (newer alpine baseimages do NOT work on any RPi (Debian Buster) right now (02/2021)
+* https://github.com/GioF71/squeezelite-docker
 
 ### available container:
 arm32v6
@@ -16,7 +17,7 @@ arm32v7
 arm64v8
 (x86)
 
-##__Usage:__
+## __Usage:__
 docker run -d --restart=unless-stopped \
     --name=Squeezelite \
     --device=/dev/snd \
@@ -25,7 +26,7 @@ docker run -d --restart=unless-stopped \
     intrepidde/arm32v6-squeezelite:latest
 
 
-###variables and their defaults:
+### variables and their defaults:
 * STARTUP_DELAY_SEC 0
 * SQUEEZELITE_AUDIO_DEVICE default
 * SQUEEZELITE_NAME SqueezeLite

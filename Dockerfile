@@ -1,6 +1,5 @@
 ARG ARCH=
 FROM ${ARCH}/alpine:3.12
-# FROM arm32v7/alpine:3.125
 
 COPY run-squeezelite.sh /run-squeezelite.sh
 RUN passwd -l root ; \
