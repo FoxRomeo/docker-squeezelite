@@ -3,7 +3,7 @@ FROM ${ARCH}/alpine:3.12
 
 COPY run-squeezelite.sh /run-squeezelite.sh
 RUN passwd -l root ; \
-    apk add --update --upgrade bash libusb openssl flac faad2 alsa-lib libmad libvorbis mpg123 && \
+    apk add --update --upgrade bash procps libusb openssl flac faad2 alsa-lib libmad libvorbis mpg123 && \
     apk add --update --upgrade alpine-sdk git libusb-dev openssl-dev flac-dev faad2-dev alsa-lib-dev libmad-dev libvorbis-dev mpg123-dev && \
     mkdir -p /usr/src && \
     cd /usr/src && \
@@ -26,5 +26,6 @@ ENV STARTUP_DELAY_SEC 0
 CMD ["/run-squeezelite.sh"]
 
 # health checks
+COPY healthcheck.sh /healthcheck.sh
 HEALTHCHECK --start-period=30s --interval=30s --timeout=3s --retries=3 \
     CMD /bin/sh /healthcheck.sh
