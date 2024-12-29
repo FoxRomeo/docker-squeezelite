@@ -1,5 +1,5 @@
 ARG ARCH=
-FROM ${ARCH}/alpine:3.12
+FROM ${ARCH}/alpine:3.20
 
 COPY run-squeezelite.sh /run-squeezelite.sh
 RUN passwd -l root ; \
