@@ -10,7 +10,7 @@ RUN passwd -l root ; \
     git clone https://github.com/ralph-irving/squeezelite.git && \
     cd squeezelite && \
     make && \
-    cp -fv /usr/src/squeezelite/squeezelite /usr/bin/ && \
+    cp -vf /usr/src/squeezelite/squeezelite /usr/bin/ && \
     cd / && \
     rm -rf /usr/src && \
     apk del alpine-sdk git libusb-dev openssl-dev flac-dev faad2-dev alsa-lib-dev libmad-dev libvorbis-dev mpg123-dev && \
