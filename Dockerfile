@@ -10,6 +10,7 @@ RUN passwd -l root ; \
     git clone https://github.com/ralph-irving/squeezelite.git && \
     cd squeezelite && \
     make && \
+    ls -latr && \
     cp squeezelite /usr/bin/ && \
     cd / && \
     rm -rf /usr/src && \
