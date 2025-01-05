@@ -15,6 +15,7 @@ RUN passwd -l root ; \
     cd / && \
     rm -rf /usr/src && \
     apk del alpine-sdk git libusb-dev openssl-dev flac-dev faad2-dev alsa-lib-dev libmad-dev libvorbis-dev mpg123-dev && \
+    ls -la /usr/bin/squeeze* && \
     chmod u+x /run-squeezelite.sh
 
 ENV SQUEEZELITE_AUDIO_DEVICE default
