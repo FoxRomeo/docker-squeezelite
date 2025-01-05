@@ -11,6 +11,7 @@ RUN passwd -l root ; \
     cd squeezelite && \
     make && \
     cp -vf /usr/src/squeezelite/squeezelite /usr/bin/ && \
+    chmod 755 /usr/bin/squeezelite && \
     cd / && \
     rm -rf /usr/src && \
     apk del alpine-sdk git libusb-dev openssl-dev flac-dev faad2-dev alsa-lib-dev libmad-dev libvorbis-dev mpg123-dev && \
